@@ -1,0 +1,40 @@
+'''
+Created on Oct 22, 2012
+
+@author: edgar
+'''
+from clases.util.mutagen.easyid3 import EasyID3 
+
+class Cancion(object):
+    
+    def __init__(self,audioFile):
+        self.id3info = EasyID3(audioFile)
+        self.trackNumber = self.id3info["tracknumber"][0]
+        self.artist = self.id3info["artist"][0]
+        self.title = self.id3info["title"][0]
+        self.album = self.id3info["album"][0]
+    
+     
+    def getTitulo(self):
+        return self.title
+    
+    def getAlbum(self):
+        return self.album
+    
+    def getArtista(self):
+        return self.artist
+    
+    def getNumeroPista(self):
+        return self.trackNumber
+    
+    def setTitulo(self, titulo):
+        self.title = titulo
+        
+    def setAlbum(self, album):
+        self.album = album
+        
+    def setArtista(self, artista):
+        self.artist = artista
+        
+    def setNumeroPista(self, pista):
+        self.trackNumber = pista        

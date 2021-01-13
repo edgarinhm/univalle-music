@@ -1,0 +1,10 @@
+ejemplo {
+width: 500px;
+background-color: #cecece;
+border: 1px solid #030303;
+padding: 5px;
+}
+ 
+#ejemplo ul {
+list-style: none;
+}

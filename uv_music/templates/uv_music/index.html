@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}uv_music/css/style.css"/>
+        <link rel="shortcut icon" href="{{ STATIC_URL }}uv_music/css/img/favicon.ico"/>        
+        <title>Univalle-Music, un producto de ChibchASofT</title>        
+    </head>
+    <body>
+        <img id="cosa" alt="logo" src="{{ STATIC_URL }}uv_music/css/img/Univalle_Music_Logo.png">
+        <form id="login" action="{% url uv_music_home %}" method="post">
+        	{% csrf_token %}
+            <h1>Univalle-Music</h1>
+            <fieldset id="inputs">
+                <input id="accion" name="accion" type="hidden" value="ingresar">
+                <input id="username" name="nombre" type="text" placeholder="E-Mail" autofocus required>
+                <input id="password" name="password" type="password" placeholder="contraseña" required>
+            </fieldset>
+            <fieldset id="actions">
+                <input type="submit" id="submit" value="Ingresar">
+                <a href="{% url uv_music_registro %}" title="Registrate ya!">¿No eres usuario?</a>
+                <a href="#" title="Volver al Home">Regresar al Home</a>
+            </fieldset>
+        </form>
+        <a href="#" id="chibcha" title="CopyLeft">ChibchASofT 2012</a>       
+    </body>
+</html>

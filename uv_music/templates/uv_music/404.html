@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% comments %} Proyecto Univalle WWW 2012 {% endcomment %}
+
+{$ block titulo %} 404 {% endblock %}
+
+{% block encabezado %}
+   <h1>Univalle-Music :( </h1>
+{% endblock %}
+
+{% contenido %}
+   <h1>Lo sentimos no encontramos lo que estas buscando :( </h1>
+   <p>
+     <img src='{{ STATIC_URL }}uv_music/css/img/kernel.jpg'>
+   </p>
+
+{% endblock %}
+         
+         
+          

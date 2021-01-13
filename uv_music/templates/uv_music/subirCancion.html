@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>univalle-music:sube tu musica</title>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}uv_music/css/styles.css"/>
+		<script src="{{ STATIC_URL }}uv_music/js/jquery.js"></script>
+	</head>
+	<body>
+		<h1>Univalle-Music: busca, selecciona y sube tu musica</h1>
+		<form action="{% url uv_music_audio %}" enctype="multipart/form-data" method="post">
+			<p>seleciona los archivos a subir
+				<input type="file" name="datafile" size="40"/>
+			</p>
+			<div>
+				<input type="submit" value="Subir"/>
+			</div>
+		</form>
+	</body>	
+</html>
